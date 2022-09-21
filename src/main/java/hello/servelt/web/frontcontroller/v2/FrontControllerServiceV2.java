@@ -1,5 +1,6 @@
 package hello.servelt.web.frontcontroller.v2;
 
+import hello.servelt.web.frontcontroller.MyView;
 import hello.servelt.web.frontcontroller.v2.controller.MemberFormControllerV2;
 import hello.servelt.web.frontcontroller.v2.controller.MemberListControllerV2;
 import hello.servelt.web.frontcontroller.v2.controller.MemberSaveControllerV2;

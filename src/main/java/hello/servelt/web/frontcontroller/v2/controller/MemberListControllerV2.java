@@ -2,8 +2,8 @@ package hello.servelt.web.frontcontroller.v2.controller;
 
 import hello.servelt.damain.member.Member;
 import hello.servelt.damain.member.MemberRepository;
+import hello.servelt.web.frontcontroller.MyView;
 import hello.servelt.web.frontcontroller.v2.ControllerV2;
-import hello.servelt.web.frontcontroller.v2.MyView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
