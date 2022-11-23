@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 public class RequestBodyStringServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//message body의 내용을 byte code로 얻어낼 수 있다. 이후 string으로 parse
 		ServletInputStream inputStream = request.getInputStream();
 		String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 
