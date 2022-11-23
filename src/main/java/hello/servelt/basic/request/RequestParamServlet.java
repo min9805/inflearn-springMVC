@@ -12,6 +12,9 @@ import java.io.IOException;
  * http://localhost:8080/request-param?username=hello&age=20
  */
 
+/*
+ * param name을 꺼낸 후 request.getParameter를 통해서 value 값을 가져온다
+ * param name이 같은 경우 getParameterValues 를 통해 list를 받아올 수 있다*/
 @WebServlet(name = "requestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
 	@Override
