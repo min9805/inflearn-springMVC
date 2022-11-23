@@ -17,6 +17,7 @@ public class MemberSaveServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//form data 읽기
 		String username = request.getParameter("username");
 		int age = Integer.parseInt(request.getParameter("age"));
 
@@ -37,6 +38,6 @@ public class MemberSaveServlet extends HttpServlet {
 				" <li>age=" + member.getAge() + "</li>\n" + "</ul>\n" +
 				"<a href=\"/index.html\">메인</a>\n" + "</body>\n" +
 				"</html>");
-		
+
 	}
 }
