@@ -3,6 +3,7 @@ package hello.servelt.damain.member;
 import lombok.Getter;
 import lombok.Setter;
 
+//Member domain
 @Getter
 @Setter
 public class Member {

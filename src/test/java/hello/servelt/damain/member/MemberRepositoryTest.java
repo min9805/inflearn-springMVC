@@ -10,6 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MemberRepositoryTest {
 	MemberRepository memberRepository = MemberRepository.getInstance();
 
+	//테스트가 끝날 때마다 clearStore()
 	@AfterEach
 	void afterEach() {
 		memberRepository.clearStore();
