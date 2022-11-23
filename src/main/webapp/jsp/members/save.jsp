@@ -1,8 +1,9 @@
 <%@ page import="hello.servlet.domain.member.MemberRepository" %>
 <%@ page import="hello.servlet.domain.member.Member" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
- //request, response 사용 가능
+ //request, response 사용 가능 -> jsp 도 servlet으로 변환되어 사용되기 때문에 문법상으로 지원된다.
     MemberRepository memberRepository = MemberRepository.getInstance();
 
     System.out.println("save.jsp");

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- HTML parse to JSP file.. new-form -> save  --%>
+
 <html>
   <head>
       <title>Title</title>
