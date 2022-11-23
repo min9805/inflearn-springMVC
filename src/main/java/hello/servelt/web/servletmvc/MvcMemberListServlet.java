@@ -21,6 +21,7 @@ public class MvcMemberListServlet extends HttpServlet {
 		List<Member> members = memberRepository.findAll();
 
 		request.setAttribute("members", members);
+		//save와 비슷하게 members를 전체 넘긴다
 
 		String viewPath = "/WEB-INF/views/members.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
