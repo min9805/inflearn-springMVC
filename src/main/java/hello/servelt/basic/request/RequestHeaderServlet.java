@@ -18,6 +18,8 @@ public class RequestHeaderServlet extends HttpServlet {
 		printEtc(request);
 	}
 
+	//기타 부가적인 정보..
+	//remote 는 요청이 온 서버 정보, local 는 본인 서버 정보
 	private void printEtc(HttpServletRequest request) {
 		System.out.println("--- 기타 조회 start ---");
 		System.out.println("[Remote 정보]");
@@ -33,6 +35,7 @@ public class RequestHeaderServlet extends HttpServlet {
 		System.out.println();
 	}
 
+	//request header detail
 	private void printHeaderUtils(HttpServletRequest request) {
 		System.out.println("--- Header 편의 조회 start ---");
 		System.out.println("[Host 편의 조회]");
