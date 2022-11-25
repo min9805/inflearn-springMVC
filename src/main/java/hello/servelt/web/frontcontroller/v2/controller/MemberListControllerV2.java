@@ -14,6 +14,7 @@ import java.util.List;
 public class MemberListControllerV2 implements ControllerV2 {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
+	//return MyView with viewPath
 	@Override
 	public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Member> members = memberRepository.findAll();

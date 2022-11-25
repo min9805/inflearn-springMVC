@@ -18,12 +18,14 @@ import java.util.Map;
 public class FrontControllerServiceV2 extends HttpServlet {
 	private Map<String, ControllerV2> controllerMap = new HashMap<>();
 
+	//url mapping
 	public FrontControllerServiceV2() {
 		controllerMap.put("/front-controller/v2/members/new-form", new MemberFormControllerV2());
 		controllerMap.put("/front-controller/v2/members/save", new MemberSaveControllerV2());
 		controllerMap.put("/front-controller/v2/members", new MemberListControllerV2());
 	}
 
+	//find url, call controller
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("FrontControllerServiceV2.service");
