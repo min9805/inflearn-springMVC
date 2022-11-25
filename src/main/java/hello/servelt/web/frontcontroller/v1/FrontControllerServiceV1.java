@@ -17,12 +17,14 @@ import java.util.Map;
 public class FrontControllerServiceV1 extends HttpServlet {
 	private Map<String, ControllerV1> controllerMap = new HashMap<>();
 
+	//servlet 이고, 주소를 한 번에 mapping 해준다
 	public FrontControllerServiceV1() {
 		controllerMap.put("/front-controller/v1/members/new-form", new MemberFormControllerV1());
 		controllerMap.put("/front-controller/v1/members/save", new MemberSaveControllerV1());
 		controllerMap.put("/front-controller/v1/members", new MemberListControllerV1());
 	}
 
+	//mapping 을 통해 어떤 컨트롤러를 실행할 지 찾은 후 그 컨트롤러를 실행해주기만 하면 된다
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("FrontControllerServiceV1.service");

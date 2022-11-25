@@ -14,6 +14,7 @@ import java.util.List;
 public class MemberListControllerV1 implements ControllerV1 {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
+	//Servlet MVC 에서 사용한 것과 동일하다, view도 동일하게 사용한다
 	@Override
 	public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Member> members = memberRepository.findAll();
