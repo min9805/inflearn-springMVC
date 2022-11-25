@@ -8,6 +8,7 @@ import hello.servelt.web.frontcontroller.v3.ControllerV3;
 import java.util.List;
 import java.util.Map;
 
+//WEB_INF/views/, jsp 는 공통 부분이므로 추출한다
 public class MemberListControllerV3 implements ControllerV3 {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 

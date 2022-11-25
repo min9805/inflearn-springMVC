@@ -19,6 +19,7 @@ import java.util.Map;
 public class FrontControllerServletV3 extends HttpServlet {
 	private Map<String, ControllerV3> controllerMap = new HashMap<>();
 
+	//url mapping
 	public FrontControllerServletV3() {
 		controllerMap.put("/front-controller/v3/members/new-form", new MemberFormControllerV3());
 		controllerMap.put("/front-controller/v3/members/save", new MemberSaveControllerV3());
@@ -39,7 +40,9 @@ public class FrontControllerServletV3 extends HttpServlet {
 			return;
 		}
 
+		//get all parameter from request
 		Map<String, String> paramMap = createParamMap(request);
+		//request, response를 전체 넘겨주던 전과 달리 parameter만 뽑아서 넘겨준다
 		ModelView mv = controller.process(paramMap);
 
 		String viewName = mv.getViewName();
@@ -49,6 +52,7 @@ public class FrontControllerServletV3 extends HttpServlet {
 
 	}
 
+	//공통 부분을 추가해주는 함수
 	private MyView viewResolver(String viewName) {
 		return new MyView("/WEB-INF/views/" + viewName + ".jsp");
 	}
