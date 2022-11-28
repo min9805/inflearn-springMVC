@@ -6,6 +6,7 @@ import hello.servelt.web.frontcontroller.v4.ControllerV4;
 
 import java.util.Map;
 
+//return view name Stirng
 public class MemberSaveControllerV4 implements ControllerV4 {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 

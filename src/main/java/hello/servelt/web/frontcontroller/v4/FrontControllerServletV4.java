@@ -18,6 +18,7 @@ import java.util.Map;
 public class FrontControllerServletV4 extends HttpServlet {
 	private Map<String, ControllerV4> controllerMap = new HashMap<>();
 
+	//url mapping
 	public FrontControllerServletV4() {
 		controllerMap.put("/front-controller/v4/members/new-form", new MemberFormControllerV4());
 		controllerMap.put("/front-controller/v4/members/save", new MemberSaveControllerV4());
@@ -41,6 +42,8 @@ public class FrontControllerServletV4 extends HttpServlet {
 		Map<String, String> paramMap = createParamMap(request);
 		Map<String, Object> model = new HashMap<>();
 		String viewName = controller.process(paramMap, model);
+		//String만 반환받기 때문에 paramMap, model을 넘겨서 처리한다.
+		//ModelView 를 사용했다가 frontController에서 model을 제공한다
 
 		MyView myView = viewResolver(viewName);
 
